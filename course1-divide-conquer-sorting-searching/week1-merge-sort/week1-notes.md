@@ -66,9 +66,24 @@ High-Level Idea: Suppress constant factors and l ower-order terms.
 Terminology: running itme is `O(nlogn)` where n equals to input size (e.g. array length, etc.)
 
 #### Example 1: One loop
-Problem: Searching array A constains an integer t
+Problem: Search array A for an integer t
+_Pseudocode_
 ```
 for i = 1 to n
     if A[i] == t return true
     return false
 ```
+**Answer: performance is O(n)**
+The running time of this algorithm is linear with the input n
+
+#### Example 2: Two loops
+Problem: given two arrays, A and B, of length n find integer t
+_Pseudocode_
+```
+for i = 1 to n
+    if A[i] == t return true
+    return false
+    if B[i] == t return true
+    return false
+```
+**Answer: performance is also O(n)**
