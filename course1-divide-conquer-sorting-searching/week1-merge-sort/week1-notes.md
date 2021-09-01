@@ -36,9 +36,9 @@ work = 2^j *6*n/2^j = 6*n
 
 ## Ignoring to constant factors, lower-oerder terms
  > * Justifications:
-        * Way easier to analyze
-        * constants depend on architecture/compiler/programmer
-        * lose very little predictive power
+ >  * Way easier to analyze
+ >  * constants depend on architecture/compiler/programmer
+ >  * lose very little predictive power
 
 
 ## Asymptotic Analysis 
