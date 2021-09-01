@@ -20,13 +20,12 @@
 ## Level of recursion 
  
                 O       Root
-            /      \
-            |       |
-            O       O
+             /      \
+            |        |
+            O        O
             /\      /\
            /  \    /  \
-          O    O  O   O     ... base 2 log (n) levels for array size of n
-
+          O    O  O    O     ... base 2 log (n) levels for array size of n
 
 2^j number of subproblems each of size n/2^j 
 
@@ -36,10 +35,10 @@ work = 2^j *6*n/2^j = 6*n
 
 
 ## Ignoring to constant factors, lower-oerder terms
- > Justifications:
-    1. Way easier to analyze
-    2. constants depend on architecture/compiler/programmer
-    3. lose very little predictive power
+ > * Justifications:
+        * Way easier to analyze
+        * constants depend on architecture/compiler/programmer
+        * lose very little predictive power
 
 
 ## Asymptotic Analysis 
