@@ -21,12 +21,12 @@
 // Level of recursion 
 /* 
                 O       Root
-            /      \
-            |       |
-            O       O
+             /      \
+            |        |
+            O        O
             /\      /\
            /  \    /  \
-          O    O  O   O     ... base 2 log (n) levels for array size of n
+          O    O  O    O     ... base 2 log (n) levels for array size of n
 
 
 2^j number of subproblems each of size n/2^j 
@@ -35,19 +35,44 @@ total work = # of level j subprobs x subprob size at j
 work = 2^j *6*n/2^j = 6*n
 */
 
-let A =  [1,5,3,8,9]
-let B =  [4,7,0,12,11]
-
-
-A.sort((a,b)=> {return a-b})
-B.sort((a,b)=> {return a-b})
-
-
-function merge(left,right){
-  
-    var c = []
-
-
-
+function merge(left,right){  
     
+    let temp = []
+    // Break out of loop if any one of the array gets empty
+    while (left.length && right.length) {
+        // Pick the smaller among the smallest element of left and right sub arrays 
+        if (left[0] < right[0]) {
+            temp.push(left.shift())  
+        } else {
+            temp.push(right.shift()) 
+        }
+    }
+    
+    // Concatenating the leftover elements into the output array
+    // (in case we didn't go through the entire left or right array)
+    let output = [ ...temp, ...left, ...right ]
+    return output
 }
+
+function mergeSort(array) {
+    const half = array.length / 2
+    
+    // Base case or terminating case
+    if(array.length < 2){
+      return array 
+    }
+    
+    const left = array.splice(0, half)
+    let sorted = merge(mergeSort(left),mergeSort(array))
+    return sorted
+  }
+
+
+  // Run merge sort algorithm on arr1
+  let arr1 =  [1,12,34,3,2,54,664,451,78,6984,3245,67,62,324,6,34,6655,27,8,456,66,446,45,664,56,634,98,7,4,63,44,197,5]
+  randArr = []
+  for(let i =0; i < 10000; i++){
+    randArr[i] = Math.random()*10000;
+  }
+
+  console.log('Sorted array:', mergeSort(randArr));
