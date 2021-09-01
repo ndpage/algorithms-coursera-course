@@ -63,4 +63,12 @@ High-Level Idea: Suppress constant factors and l ower-order terms.
 
 > Example: equate `6n log(n) + 6n` with just `nlog(n)`
 
-Terminology: running itme is `O(nlogn)` where n equals to input size
+Terminology: running itme is `O(nlogn)` where n equals to input size (e.g. array length, etc.)
+
+#### Example 1: One loop
+Problem: Searching array A constains an integer t
+```
+for i = 1 to n
+    if A[i] == t return true
+    return false
+```
