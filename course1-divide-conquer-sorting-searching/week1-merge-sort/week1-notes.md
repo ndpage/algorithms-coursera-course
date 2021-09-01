@@ -87,3 +87,31 @@ for i = 1 to n
     return false
 ```
 **Answer: performance is also O(n)**
+
+#### Example 3: Two Nested Loops
+Problem: given two arrays A and B of length n, find a number in common
+
+```
+for i =1 to n
+    for j = 1 to n
+        if A[i] == B[i] return true
+return false
+```
+
+
+**Answer: Running time is `O(n^2)`**
+
+This is a _quadratic_ running time algorithm (i.e. n^2)
+
+#### Example 4: Two Nested Loops (1 array)
+
+Problem: does array A have a duplicate entry/value?
+
+```
+for i =1 to n
+    for j = 1 to n
+        if A[i] == A[i] return true
+return false
+```
+**Answer: running time is O(n^2)**
+
