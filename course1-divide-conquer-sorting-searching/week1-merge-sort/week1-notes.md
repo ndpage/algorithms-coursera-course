@@ -1,5 +1,4 @@
  # Week 1 notes - Divide and Conquer, Merge Sort
-    File: merge-sort.js
     Author: Nathan Page
     Date: September 1, 2021
 
@@ -9,6 +8,8 @@
     2. Recursively spilt subarrays into equal halves
     3. Stop splitting at base case (array length = 1)
     4. Merge subarrays in sorted order until output array length == input array length 
+
+
     
 
  
@@ -32,9 +33,7 @@
 total work = # of level j subprobs x subprob size at j 
 work = 2^j *6*n/2^j = 6*n
 
-
-
-## Ignoring to constant factors, lower-oerder terms
+## Ignoring to constant factors, lower-order terms
  > Justifications:
  > * Way easier to analyze
  > * constants depend on architecture/compiler/programmer
@@ -49,9 +48,19 @@ work = 2^j *6*n/2^j = 6*n
 
     for smaller n, the algorithm with smaller constant factors will be "faster"
 
-    ** Fast Algorithm = WORKST-CASE RUNNING TIME FROWS SLOWLY WITH INPUT SIZE **
+    ** Fast Algorithm = WORST-CASE RUNNING TIME FROWS SLOWLY WITH INPUT SIZE **
 
     "Sweet spot" : matheematical tractability and predictive power
 
     Holy grail: linear runnning time given input size (or as close as possible
- 
+
+### The Gist
+**Asymptotic analysis is _the_ way programmers communicate the performance of algorithms**
+
+Big Oh notation is used to quickly and efficiently convey the performace of a specific algorithm
+
+High-Level Idea: Suppress constant factors and l ower-order terms.
+
+> Example: equate `6n log(n) + 6n` with just `nlog(n)`
+
+Terminology: running itme is `O(nlogn)` where n equals to input size
