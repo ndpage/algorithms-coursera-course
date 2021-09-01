@@ -1,9 +1,9 @@
- 
+ # Week 1 notes - Divide and Conquer, Merge Sort
     File: merge-sort.js
     Author: Nathan Page
     Date: September 1, 2021
 
-** Pseudocode 
+## Pseudocode 
  
     1. Split array into equal halves 
     2. Recursively spilt subarrays into equal halves
@@ -12,12 +12,12 @@
     
 
  
-** Running time is the number of lines of code that need to be executed to finish operation 
+## Running time is the number of lines of code that need to be executed to finish operation 
 
-    Claim: Merge sorts uses at most 6n*log(n)*n+6n operations for an array of length n
+    **Claim: Merge sorts uses at most 6n*log(n)*n+6n operations for an array of length n**
 
 
-** Level of recursion 
+## Level of recursion 
  
                 O       Root
             /      \
@@ -35,22 +35,22 @@ work = 2^j *6*n/2^j = 6*n
 
 
 
-** Ignoring to constant factors, lower-oerder terms
- Justifications:
+## Ignoring to constant factors, lower-oerder terms
+ > Justifications:
     1. Way easier to analyze
     2. constants depend on architecture/compiler/programmer
     3. lose very little predictive power
 
 
-** Asymptotic Analysis 
+## Asymptotic Analysis 
 
-    -> Focus on running time for LARGE in puts sizes n
-    Example:6n*log(n) + 6n better than 1/2*n^2
-    Justification: Merge sort is "better" than others (insersion, selection) for LARGE data sizes
+    > Focus on running time for LARGE in puts sizes n
+    > Example:6n*log(n) + 6n better than 1/2*n^2
+    > Justification: Merge sort is "better" than others (insersion, selection) for LARGE data sizes
 
     for smaller n, the algorithm with smaller constant factors will be "faster"
 
-    >> Fast Algorithm = WORKST-CASE RUNNING TIME FROWS SLOWLY WITH INPUT SIZE <<
+    ** Fast Algorithm = WORKST-CASE RUNNING TIME FROWS SLOWLY WITH INPUT SIZE **
 
     "Sweet spot" : matheematical tractability and predictive power
 
