@@ -144,5 +144,5 @@ Claim: `max{f, g} = θ(f) + θ(g)`
 Proof: `1/2 *(f(n)+g(n)) <= max{f(n),g(n)} <= f(n) + g(n)` where n0 = 1, c1 = 1/2 and c2 = 1
 Solution: thus `max{f,g} = θ(f(n) + g(n))`
 
-
+Math formula: max {f,g,} = \theta (f) + $\theta$ (g)
 
