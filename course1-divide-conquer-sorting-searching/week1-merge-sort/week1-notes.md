@@ -66,6 +66,7 @@ High-Level Idea: Suppress constant factors and l ower-order terms.
 Terminology: running itme is `O(nlogn)` where n equals to input size (e.g. array length, etc.)
 
 ## Examples
+Claim: If T(n) = `a_k*n^k+.....+a_1*n+a*0`
 #### Example 1: One loop
 Problem: Search array A for an integer t
 _Pseudocode_
