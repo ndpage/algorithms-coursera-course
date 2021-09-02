@@ -117,3 +117,13 @@ return false
 ```
 **Answer: running time is O(n^2)**
 
+### Different Notation
+Big-Oh: Less than or equal to (<=)
+Big-Omega is equivalent to greater than or equal to (>=)
+Big-Theta: analagous to equal to (==)
+
+**Little-Oh** Strictly _less than_ 
+Def: `T(n) <= c * f(n)`  for all c0 
+
+Exercise: for all k>= 1, n^k-1 = o(n^k)
+
