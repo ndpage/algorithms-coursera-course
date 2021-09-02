@@ -127,3 +127,22 @@ Def: `T(n) <= c * f(n)`  for all c0
 
 Exercise: for all k>= 1, n^k-1 = o(n^k)
 
+### Additional Examples
+
+**Example 1**
+Claim: `2^n+10 = O(2^n)`
+Proof: need to pick constants c, n0 such that `2^n+10 <= c*2^n` for all n >= n0
+Solution: `2^(n+10) = 2^n * 2^10 => 1024 * 2^n`. So if we chose c = 1024 (2^10) and n0 = 1, the equality `2^(n+10) = O(n^2)` is TRUE
+
+**Example 2**
+Claim: `2^(n10) != O(2^n)`
+Proof:  `2^n10 <= c*2^n` is NOT equal (proof by contradiction) for all n >= n0
+Solution: `2^(n+10) = 2^n * 2^10 => 2^9 <= c`.the equality ` => 2^9 <= c` is FALSE, therefore `2^(n10)` is not a fucntion of O(2^n)
+
+**Example 3**
+Claim: `max{f, g} = θ(f) + θ(g)`
+Proof: `1/2 *(f(n)+g(n)) <= max{f(n),g(n)} <= f(n) + g(n)` where n0 = 1, c1 = 1/2 and c2 = 1
+Solution: thus `max{f,g} = θ(f(n) + g(n))`
+
+
+
