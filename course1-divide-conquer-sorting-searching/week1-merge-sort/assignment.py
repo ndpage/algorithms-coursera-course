@@ -1,14 +1,11 @@
 # Katasuba multiplication
-# 
-
+#
 import math
-
-def first_n_digits(num, n):
-    return num // 10 ** (int(math.log(num, 10)) - n + 1)
-
 
 # multiplication function using Karatsuba 
 def multiply(number1, number2):
+    
+    # return the product once the number is a single digit
     if len(str(number1)) == 1 or len(str(number2)) == 1:
         return number1*number2  
     
@@ -35,9 +32,11 @@ def multiply(number1, number2):
 
     return ac * 10**(2*half) + (ad_plus_bc * 10**half) + bd
 
+# Get user inputs 
 num1 = input("enter number 1: ")
 num2 = input("enter number 2: ")
 
+# Some error handling 
 try: 
     num1 = int(num1)
     num2 = int(num2)
@@ -45,4 +44,5 @@ except:
     print("Please enter an integer number!")
     quit()
 
+# Print the resulting product of the two numbers
 print("Product is",multiply(num1,num2))
